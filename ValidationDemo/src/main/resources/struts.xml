@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+<constant name="struts.devmode" value="true"></constant>
+<package name="validdemo" extends="struts-default">
+<action name="">
+   <result>/index.jsp</result>
+   </action>
+   
+   <action name="empform">
+   <result>/empform.jsp</result>
+   </action>
+   
+   <action name="register" class="com.training.actions.EmployeeAction">
+   <result name="success">/final.jsp</result>
+   <result name="error">/empform.jsp</result>
+   <result name="input">/empform.jsp</result>
+   </action>
+   
+   <action name="studform">
+   <result>/studform.jsp</result>
+   </action>
+   
+   <action name="registerstudent" class="com.training.actions.StudentAction">
+   <result name="success">/success.jsp</result>
+   <result name="error">/studform.jsp</result>
+   <result name="input">/studform.jsp</result>
+   </action>
+   
+ </package>
+ 
+</struts>
